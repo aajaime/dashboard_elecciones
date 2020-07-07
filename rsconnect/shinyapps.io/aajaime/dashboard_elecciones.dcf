@@ -1,0 +1,12 @@
+name: dashboard_elecciones
+title: dashboard_elecciones
+username:
+account: aajaime
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2533392
+bundleId: 3362483
+url: https://aajaime.shinyapps.io/dashboard_elecciones/
+when: 1594128509.38004
+asMultiple: FALSE
+asStatic: FALSE
