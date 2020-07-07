@@ -42,7 +42,7 @@ df_elec2 <- df_elec2 %>%
     mutate(id_region = (ifelse((comuna %in% c('corral', 'futrono', 'la union', 'lago ranco', 'lanco', 'los lagos', 'mafil', 'mariquina', 'paillaco', 'panguipulli', 'rio bueno', 'valdivia')),14,id_region)),
            id_region = (ifelse((comuna %in% c('arica','camarones','general lagos','putre')),15,id_region)))
 
-# Diferenciar entre elecciones (primera y segunda vuelta no siempre fueron en aÃ±os diferentes)
+# Diferenciar entre elecciones (primera y segunda vuelta no siempre fueron en años diferentes)
 df_elec2 <- df_elec2 %>% 
     mutate(vuelta = case_when((votacion_presidencial == 'UNICA VOTACIÓN')~ '1',
                               (votacion_presidencial == 'PRIMERA VOTACIÓN')~ '1',
