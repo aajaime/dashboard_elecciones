@@ -10,11 +10,14 @@ library(chilemapas)
 
 
 # Lectura bases
+
+# Base código territorial (elaboración propia)
 cod <- readxl::read_xlsx("codigo_comunas.xlsx") %>% 
     janitor::clean_names() %>% 
     rename('codigo_comuna' = cut_codigo_unico_territorial) %>% 
     mutate(comuna = chartr('áéíóú','aeiouu',tolower(nombre)))
 
+# Base elecciones (fuente: SERVEL)
 df_elec <- readRDS("base_elec.rds") %>% 
     janitor::clean_names() %>% 
     mutate(comuna = chartr('áéíóú','aeiouu',tolower(comuna)),
